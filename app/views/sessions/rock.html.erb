@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RockPaperScissors</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="..//assets/css/bootstrap.css">
+</head>
+<body>
+
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div>
+<h1>Rock, Paper, Scissors!</h1>
+</div>
+<%= yield %>
+<div>
+<p>You picked <%= @user_move %>.</p>
+<p>The computer picked <%= @computer_move %>.</p>
+<p><strong><%= @result %></strong></p>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+<h2>Play again! Choose Below.</h2>
+<a href="http://localhost:3000/rock" ><img height="150" width="150" src="http://localhost:3000/assets/images/rock.png" ></a>
+<a href="http://localhost:3000/scissors"> <img height="150" width="150" src="http://localhost:3000/assets/images/paper.png"></a>
+<a href="http://localhost:3000/paper"> <img height="150" width="150" src="http://localhost:3000/assets/images/scissors.png"></a>
+</div>
+</div>
+</div>
+</body>
+</html>
